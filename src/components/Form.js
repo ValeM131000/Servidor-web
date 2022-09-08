@@ -2,7 +2,9 @@ import React from 'react'
 import AdapterDB from '../adapterDB'
 
 const Form = ({estudiante,setestudiante, setlistUpdate})=>{
-
+    
+    const mongoDB= new AdapterDB()
+    
     const handleChange =e=>{
         setestudiante({
             ...estudiante,
@@ -25,9 +27,7 @@ const Form = ({estudiante,setestudiante, setlistUpdate})=>{
         }
 
         //cosulta
-        
-        const mongoDB= new AdapterDB()
-            mongoDB.agregar(estudiante)
+        mongoDB.agregar(estudiante)
        
         
         setlistUpdate(true)

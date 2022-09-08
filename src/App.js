@@ -24,7 +24,7 @@ function App() {
   
    
     const getEstudiantesMG=()=>{
-      fetch('http://52.21.31.95:3000/api/estudiantes') // acceso a la API
+      fetch('http://52.73.32.215:3000/api/estudiantes') // acceso a la API
       .then(res=> res.json()) // Convierte en formato json
       .then(res => setestudiantesMG(res)) // asigna la respuesta
     }
